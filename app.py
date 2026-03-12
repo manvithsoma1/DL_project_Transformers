@@ -6,6 +6,12 @@ import os
 import plotly.graph_objects as go
 import plotly.express as px
 
+try:
+    import tensorflow as tf
+    TF_AVAILABLE = True
+except ImportError:
+    TF_AVAILABLE = False
+
 st.set_page_config(page_title="Transformer NLP", page_icon="🤖", layout="wide")
 
 # Dark Theme CSS
